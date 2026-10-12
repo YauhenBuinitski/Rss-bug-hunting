@@ -115,7 +115,7 @@ function renderCart() {
   const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
   badgeEl.textContent = totalQty;
   totalEl.textContent = total;
-  emptyMsg.hidden = true;
+  emptyMsg.hidden = cart.length > 0;
 }
 
 promoBtn.addEventListener("click", applyPromo);
