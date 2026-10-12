@@ -24,6 +24,7 @@ function addTask() {
 
 function toggleTask(id) {
   const task = tasks.find((t) => t.id === id);
+  // toggle: click again to remove the done mark
   task.done = !task.done;
   render();
 }
